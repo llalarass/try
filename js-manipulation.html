@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM Manipulation</title>
+</head>
+<body>
+    <h1 id="judul">JavaScript Element Manipulation</h1>
+    <button onclick="ubahJudul()">Modifikasi Judul</button>
+    <script>
+        // definisi function ubahJudul()
+        function ubahJudul() {
+            // deklarasi object dari pemilihan
+            let h = document.getElementById('judul');
+            // ubah property objek tersebut menjadi nilai yang lain
+            h.innerHTML = "Elemen H1 berhasil dimanipulasi";
+        }
+    </script>
+</body>
+</html>

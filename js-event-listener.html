@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Event Listener</title>
+</head>
+<body>
+    <h1>Digital Tally Counter</h1>
+    <h3 id="counter">0</h3>
+    <button id="plus" onclick="nambah()">+</button>
+    <button id="min" onclick="kurang()">-</button>
+    <p id="tombol"></p>
+    <script>
+        let i = 0;
+        function nambah() {
+            i++; // i = i + 1;
+            document.getElementById('counter').innerText = i;
+        }        
+        function kurang() {
+            i--; // i = i - 1;
+            document.getElementById('counter').innerText = i;
+        }
+        document.addEventListener('keyup', function(e) {
+            if (e.key == "ArrowUp") {
+                nambah();
+            } else if (e.key == "ArrowDown") {
+                kurang();
+            }
+        });
+    </script>
+</body>
+</html>
